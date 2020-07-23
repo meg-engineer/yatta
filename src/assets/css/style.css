@@ -2,58 +2,72 @@
   text-align: center;
 }
 
-tspan {
-  white-space: inherit;
-}
-
-text {
-  white-space: nowrap;
-}
-
-/* @media screen and (min-width: 426px)  */
-
-#gray-bg {
-  background-color: #f8f8f8;
+/* メイン画面 */
+#bg {
+  background-color: #fffff2;
   margin-top: 16px;
   height: 100%;
   min-height: 100%;
   margin-bottom: 40px;
 }
 
-.label:not(:last-child) {
-  margin-bottom: 0.5em;
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* @media screen and (min-width: 426px) */
-
-.message-input {
-  height: 60%;
+.card-container {
+  position: relative;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 30% 0 0;
 }
 
-.textarea:not([rows]) {
-  max-height: 600px;
-  min-height: 120px;
+.card-svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.input-container {
+  width: 50%;
+}
+.input-container p {
+  margin: 10px;
 }
 
 .textarea {
-  max-width: 1200px;
-  min-width: 600px;
+  width: 80%;
   padding: 0.625em;
   resize: vertical;
-  white-space: pre-wrap;
+}
+
+.create-button {
+  margin: 20px;
+}
+
+.card-img {
+  max-width: 80%;
 }
 
 .button-color {
   display: block;
-  background-color: #E85A70;
+  background-color: #e85a70;
   margin: 0 auto;
   padding: 10px 30px;
+  border: none;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
   color: #fff;
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
-  transition: 0.3s;
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.2);
+  transition: 0.2s;
 }
 
 .button-color:hover {
@@ -67,6 +81,7 @@ text {
   margin: 0 auto;
 }
 
+/* Tweet画面 */
 .tweet-button {
   display: block;
   background-color: #00acee;
@@ -86,22 +101,54 @@ text {
   transform: translateY(-5px);
 }
 
-.cls-1 {
-  fill: none;
-}
+/* レスポンシブ */
+@media screen and (max-width: 425px) {
+  .container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+  }
 
-.cls-2 {
-  fill: #fbb03b;
-}
+  .card-container {
+    position: relative;
+    width: 100%;
+    padding-top: 60%;
+    margin: 0 auto;
+  }
 
-.cls-3 {
-  fill: #fcee21;
-}
+  .card svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
-.cls-4 {
-  fill: url(#新規パターンスウォッチ_1);
-}
+  .input-container {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 
-.cls-5 {
-  fill: #f2f2f2;
+  .textarea {
+    max-width: 100%;
+    padding: 0.625em;
+    resize: vertical;
+  }
+
+  .create-button {
+    margin: 10px;
+  }
+
+  .button-color {
+    display: block;
+    background-color: #e85a70;
+    margin: 0 auto;
+    padding: 5px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+  }
 }

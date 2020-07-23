@@ -12,6 +12,7 @@ export default {
 </script>
 <style scoped>
 .appTitleContainer {
+  font-size: 28px;
   text-align: center;
   margin: 32px 0 32px 0;
 }

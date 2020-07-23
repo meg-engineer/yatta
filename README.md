@@ -1,24 +1,17 @@
-# oiwai
+# やった YATTA
 
-## Project setup
-```
-npm install
-```
+## YATTA って？
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+嬉しかったことを Twitter でシェアできるアプリです。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 実装機能
 
-### Lints and fixes files
-```
-npm run lint
-```
+- フロントエンド
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+  - Vue.js を用いたシングルページアプリケーション
+  - SVG 画像へのメッセージ入力
+  - Twitter への共有機能
+
+- バックエンド
+  - Firebase Firestore による DB 処理(追加、保存、取得、削除)
+  - Firebase Functions を用いた OGP 画像生成

@@ -1,13 +1,14 @@
 <template>
   <div class="app">
-    <section id="gray-bg">
-      <div class="flex-conteiner center">
+    <section id="bg">
+      <div class="container center">
         <div class="card-container">
           <svg
             ref="svgCard"
             width="800px"
             height="500px"
             viewBox="0 0 1200 630"
+            class="card-svg"
           >
             <g>
               <SVGElement name="card1" />
@@ -60,28 +61,21 @@
                   letter-spacing="-0.002em"
                   word-break="normal"
                 >
-                  <!-- <tspan x="200" y="26">
-                    {{ text }}
-                  </tspan>-->
                   <tspan x="280" y="52">{{ text2 }}</tspan>
                   <tspan x="280" y="78">{{ text3 }}</tspan>
                   <tspan x="280" y="104">{{ text4 }}</tspan>
                   <tspan x="280" y="130">{{ text5 }}</tspan>
-                  <!-- <tspan x="50" y="200">
-                    {{ tag }}
-                  </tspan>-->
                 </text>
               </g>
             </g>
           </svg>
         </div>
         <div class="input-container">
-          <label>やった！</label>
-          <div class="message-input center">
+          <p>やった！</p>
+          <div class="message-input">
             <textarea
               v-model="text"
               type="text"
-              style="width:100%; margin-bottom:10px"
               maxlength="100"
               minlength="1"
               required
@@ -89,11 +83,11 @@
               class="textarea"
               v-on:keyup.enter="regExp"
             ></textarea>
+            <div data-v-ee7dc48e class="create-button center">
+              <button @click="create" class="button-color">作成する</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div data-v-ee7dc48e class="create-button center">
-        <button @click="create" class="button-color">作成する</button>
       </div>
     </section>
   </div>
@@ -186,9 +180,5 @@ export default {
   }
 };
 </script>
-<style>
-@import "../assets/css/reset.css";
-@import "../assets/css/style.css";
-</style>
 
 © 2020 Meg.

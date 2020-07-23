@@ -4,12 +4,12 @@
       <img class="card-img" :src="post.url" alt="Card image cap" />
     </div>
     <div class="post-buttons">
-      <a :href="tw_url" class="tweet-button"
-        ><font-awesome-icon
+      <a :href="tw_url" class="tweet-button" target="_blank">
+        <font-awesome-icon
           :icon="{ prefix: 'fab', iconName: 'twitter' }"
         ></font-awesome-icon
-        >twitterで共有する</a
-      >
+        >twitterで共有する
+      </a>
       <a href="/" class="button-color">もどる</a>
     </div>
   </div>
@@ -42,7 +42,7 @@ export default {
           };
 
           this.post = data;
-          console.log(data.url);
+          console.log(doc.data());
           this.tw_url = `https://twitter.com/intent/tweet?text=YATTA%EF%BC%81+%E5%AC%89%E3%81%97%E3%81%84%E3%81%93%E3%81%A8%E3%80%81%E3%82%B7%E3%82%A7%E3%82%A2%0D%0A&url=https://oiwai-9b69a.firebaseapp.com/s/${this.post.post_id}&hashtags=YATTA%EF%BC%81%0D%0A&via=MegEngineer`;
         });
       });

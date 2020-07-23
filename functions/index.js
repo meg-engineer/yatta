@@ -17,7 +17,7 @@ const og_image_width = 1200;
 const og_image_height = 630;
 const fb_appid = "";
 const tw_description = "嬉しいこと、シェアしよう";
-const tw_site = "https://https://oiwai-9b69a.firebaseapp.com/post/";
+const tw_site = "https://oiwai-9b69a.firebaseapp.com/post/";
 const tw_creator = "";
 
 const genHtml = (image_url, post_id) => `
@@ -59,7 +59,7 @@ app.get("/s/:id", (req, res) => {
     .get()
     .then(querySnapshot => {
       querySnapshot.forEach(doc => {
-        const html = genHtml(doc.data().imageurl, req.params.id);
+        const html = genHtml(doc.data().url, req.params.id);
         res.send(html);
       });
     });
