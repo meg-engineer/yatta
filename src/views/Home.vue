@@ -70,9 +70,8 @@
               required
               rows="4"
               class="textarea"
-              v-on:keyup.enter="regExp"
             ></textarea>
-            <div data-v-ee7dc48e class="create-button center">
+            <div class="create-button center">
               <button @click="create" class="button-color">作成する</button>
             </div>
           </div>
@@ -90,8 +89,8 @@ const db = firebase.firestore();
 
 const svg2imageData = (svgElement, successCallback, errorCallback) => {
   const canvas = document.createElement("canvas");
-  canvas.width = 1200;
-  canvas.height = 630;
+  canvas.width = 800;
+  canvas.height = 500;
   const context = canvas.getContext("2d");
   const image = new Image();
   const svgData = new XMLSerializer().serializeToString(svgElement);
@@ -99,7 +98,7 @@ const svg2imageData = (svgElement, successCallback, errorCallback) => {
     "data:image/svg+xml;charset=utf-8;base64," +
     btoa(unescape(encodeURIComponent(svgData)));
   image.onload = () => {
-    context.drawImage(image, 0, 0, 1200, 630);
+    context.drawImage(image, 0, 0, 800, 500);
     successCallback(canvas.toDataURL());
   };
   image.onerror = e => {
