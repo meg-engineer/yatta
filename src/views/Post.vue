@@ -32,8 +32,6 @@ export default {
       .where("post_id", "==", this.$route.params["post_id"])
       .get()
       .then(querySnapshot => {
-        // this.loading = false;
-        // this.counter = 0;
         querySnapshot.forEach(doc => {
           let data = {
             url: doc.data().url,
@@ -43,7 +41,7 @@ export default {
 
           this.post = data;
           console.log(doc.data());
-          this.tw_url = `https://twitter.com/intent/tweet?text=YATTA%EF%BC%81+%E5%AC%89%E3%81%97%E3%81%84%E3%81%93%E3%81%A8%E3%80%81%E3%82%B7%E3%82%A7%E3%82%A2%0D%0A&url=https://oiwai-9b69a.firebaseapp.com/s/${this.post.post_id}&hashtags=YATTA%EF%BC%81%0D%0A&via=MegEngineer`;
+          this.tw_url = `https://twitter.com/intent/tweet?text=YATTA%EF%BC%81+%E5%AC%89%E3%81%97%E3%81%84%E3%81%93%E3%81%A8%E3%80%81%E3%82%B7%E3%82%A7%E3%82%A2%0D%0A&url=https://yatta.tokyo/s/${this.post.post_id}&hashtags=YATTA%EF%BC%81%0D%0A&via=MegEngineer`;
         });
       });
   },
@@ -53,9 +51,4 @@ export default {
 <style scoped>
 @import "../assets/css/reset.css";
 @import "../assets/css/style.css";
-.btn {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
 </style>

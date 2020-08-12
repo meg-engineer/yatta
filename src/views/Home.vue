@@ -11,7 +11,7 @@
             class="card-svg"
           >
             <g>
-              <SVGElement name="card1" />
+              <SVGElement name="card" />
               <g>
                 <rect
                   width="1000"
@@ -22,33 +22,22 @@
                 />
                 <SVGElement name="title" x="70" y="0" />
                 <path
-                  id="パス_8"
-                  data-name="パス 8"
                   d="M477.52,304.69,467,294.15a6.763,6.763,0,0,1,9.57-9.56h0l1,1,1-1a6.76,6.76,0,0,1,9.56,9.56Z"
                   fill="#e50132"
                 />
                 <path
-                  id="パス_9"
-                  data-name="パス 9"
                   d="M538.76,304.69l-10.54-10.54a6.763,6.763,0,0,1,9.57-9.56l1,1,1-1a6.76,6.76,0,0,1,9.56,9.56Z"
                   fill="#e50132"
                 />
                 <path
-                  e
-                  id="パス_10"
-                  data-name="パス 10"
                   d="M600,304.69l-10.54-10.54a6.763,6.763,0,0,1,9.57-9.56h0l1,1,1-1a6.763,6.763,0,1,1,9.57,9.56h0Z"
                   fill="#e50132"
                 />
                 <path
-                  id="パス_11"
-                  data-name="パス 11"
                   d="M661.24,304.69l-10.53-10.54a6.76,6.76,0,0,1,9.56-9.56l1,1,1-1a6.763,6.763,0,1,1,9.57,9.56h0Z"
                   fill="#e50132"
                 />
                 <path
-                  id="パス_12"
-                  data-name="パス 12"
                   d="M722.48,304.69,712,294.15a6.76,6.76,0,0,1,9.56-9.56l1,1,1-1a6.763,6.763,0,1,1,9.57,9.56Z"
                   fill="#e50132"
                 />
@@ -95,7 +84,7 @@
 
 <script>
 import firebase from "firebase";
-import SVGElement from "../assets/SVGElement";
+import SVGElement from "@/assets/SVGElement";
 
 const db = firebase.firestore();
 
@@ -180,5 +169,3 @@ export default {
   }
 };
 </script>
-
-© 2020 Meg.

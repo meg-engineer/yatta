@@ -7,17 +7,17 @@ admin.initializeApp({});
 
 const db = admin.firestore();
 
-const url = "https://oiwai-9b69a.firebaseapp.com/post/";
+const url = "https://yatta.tokyo/post/";
 const site_name = "YATTA!";
 const title = "YATTA!";
 const meta_description = "嬉しいこと、シェアしよう";
 const meta_keywords = ["YATTA!"];
 const og_description = "嬉しいこと、シェアしよう";
-const og_image_width = 1200;
-const og_image_height = 630;
+const og_image_width = 800;
+const og_image_height = 500;
 const fb_appid = "";
 const tw_description = "嬉しいこと、シェアしよう";
-const tw_site = "https://oiwai-9b69a.firebaseapp.com/post/";
+const tw_site = "https://yatta.tokyo/post/";
 const tw_creator = "";
 
 const genHtml = (image_url, post_id) => `

@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <div class="footer">© 2020 Meg.</div>
-  </div>
+  <div class="footer">© 2020 Meg</div>
 </template>
 <script>
 export default {
